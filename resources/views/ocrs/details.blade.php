@@ -1,0 +1,59 @@
+@extends('layouts.app')
+
+@section('content')
+<section class="vbox">
+    <section class="scrollable padder">
+        <div class="row">
+            <div class="col-sm-8">
+                <section class="panel panel-default">
+                    <header class="panel-heading font-bold">Details</header>
+                    <div class="panel-body">
+                    	<div class="tab-pane active" id="activity">
+                          <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                            <li class="list-group-item">
+                             
+                              <strong class="block">Name</strong>
+                                <small>{{ $result->name }}</small>
+                            </li>
+                            <li class="list-group-item">
+                             <strong class="block">Designation</strong>
+                                <small>{{ $result->designation}}</small>
+                            </li>
+                            
+                            <li class="list-group-item">
+                               <strong class="block">Address</strong>
+                                <small>{{ $result->address}}</small>
+                            </li>
+                            <li class="list-group-item">
+                              <strong class="block">Email</strong>
+                                <small>{{ $result->email}}</small>
+                            </li>
+                            <li class="list-group-item">
+                              <strong class="block">Phone</strong>
+                                <small>{{ $result->phone}}</small>
+                            </li>
+                            <li class="list-group-item">
+                              <strong class="block">Fax</strong>
+                                <small>{{ $result->fax}}</small>
+                            </li>
+                            <li class="list-group-item">
+                              <strong class="block">Address</strong>
+                                <small>{{ $result->address}}</small>
+                            </li>
+                            <li class="list-group-item">
+                              <strong class="block">Saved Directory</strong>
+                                <small>{{ $result->directory['name']}}</small>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-sm-4">
+            {!! Html::image($result->getPhoto(), '', array('height' => '250px','width' => '340px')) !!}
+            </div>
+        </div>
+    </section>
+</section>
+@stop
